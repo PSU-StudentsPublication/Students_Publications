@@ -11,20 +11,6 @@
         mobileNav.hidden = !mobileNav.hidden;
       }
     });
-  const tabs = document.querySelectorAll(".tab-btn");
-  const panels = document.querySelectorAll(".view-panel");
-
-  tabs.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // remove active everywhere
-      tabs.forEach((b) => b.classList.remove("active"));
-      panels.forEach((p) => p.classList.remove("active"));
-
-      // activate clicked tab + corresponding panel
-      btn.classList.add("active");
-      document.getElementById(btn.dataset.target).classList.add("active");
-    });
-  });
 
   // populate current year in footer
   const yearEl = document.getElementById("year");
