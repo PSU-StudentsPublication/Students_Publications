@@ -37,17 +37,9 @@ body {
 .brand .accent {
   color: #0b1720;
 }
-.main-nav ul {
+.header-inner {
   display: flex;
-  gap: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.main-nav a {
-  color: #0b1720;
-  text-decoration: none;
-  padding: 6px 4px;
+  justify-content: center;
 }
 .actions {
   display: flex;
@@ -83,9 +75,16 @@ body {
 }
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 5fr 12fr;
   gap: 28px;
   align-items: center;
+}
+.hero-image {
+  width: 100%;
+  height: 350px; /* Adjust if you want taller */
+  border-radius: 14px;
+  background: url("resources/PSU_logo.webp") center/cover no-repeat;
+  box-shadow: 0 8px 24px rgba(11, 23, 32, 0.12);
 }
 .hero-copy h1 {
   font-size: 36px;
@@ -307,6 +306,8 @@ body {
 }
 
 .team-member {
+  display: block;
+  text-decoration: none;
   padding: 14px 18px;
   border-radius: 10px;
   background: #f7fff9;
@@ -316,18 +317,9 @@ body {
 }
 .team-member:hover {
   background: #e1ffed;
+  cursor: pointer;
 }
-.nav-btn {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  background: #ffffff;
-  color: #0b1720;
-  border: 1px solid rgba(11, 23, 32, 0.08);
-  transition: 0.2s ease, transform 0.2s ease;
-}
+
 /* Responsive layout */
 @media (max-width: 900px) {
   .team-groups {
@@ -355,4 +347,118 @@ html {
   background: #036b3f;
   box-shadow: 0 4px 12px rgba(11, 23, 32, 0.08);
 }
+
+/* Research Supervisors */
+.supervisor-section {
+  padding: 60px 20px;
+  background: #f2fff7;
+}
+
+.supervisor-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.supervisor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.supervisor-card {
+  display: block;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  border-left: 5px solid #00c26e;
+  box-shadow: 0 10px 30px rgba(11, 23, 32, 0.06);
+  transition: background 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.supervisor-card:hover {
+  background: #e8fff1;
+  transform: translateY(-3px);
+}
+
+.sup-name {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.sup-email {
+  margin: 0;
+  color: #00a85a;
+  font-weight: 500;
+}
+
+.sup-arrow {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  font-size: 1.3rem;
+  color: #00a85a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .supervisor-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .supervisor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-toggle-section {
+  padding: 40px 20px;
+  background: #f2fff7;
+}
+
+.research-tabs {
+  display: flex;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(11, 23, 32, 0.06);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px 10px;
+  border-radius: 10px;
+  border: 1px solid #e6edf3;
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tab-btn:hover {
+  background: #e8fff1;
+}
+
+.tab-btn.active {
+  background: #00c26e;
+  color: #fff;
+  border-color: #00c26e;
+}
+
+/* Panels */
+.view-panel {
+  display: none;
+  margin-top: 20px;
+}
+
+.view-panel.active {
+  display: block;
+}
+
 /* --- end styles.css --- */
