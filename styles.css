@@ -80,7 +80,7 @@ body {
   align-items: center;
 }
 .hero-image {
-  width: 100%;
+  width: 120%;
   height: 350px; /* Adjust if you want taller */
   border-radius: 14px;
   background: url("resources/PSU_logo.webp") center/cover no-repeat;
